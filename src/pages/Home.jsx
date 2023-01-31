@@ -21,7 +21,7 @@ const Home = () => {
 
       try {
         const response = await fetch(
-          "https://dalle-image-generator-server.onrender.com/api/v1/posts",
+          "https://dalle-image-generator-server.onrender.com/api/v1/post",
           {
             method: "GET",
             headers: {
@@ -31,9 +31,10 @@ const Home = () => {
         );
         if (response.ok) {
           const result = await response.json();
-          setAllPosts(result.data.reverse);
+          setAllPosts(result.data.reverse());
         }
       } catch (error) {
+        console.log(error);
       } finally {
         setLoading(false);
       }
@@ -75,7 +76,7 @@ const Home = () => {
               {searchText ? (
                 <RenderCards data={[]} title="No search results found" />
               ) : (
-                <RenderCards data={[]} title="No posts found" />
+                <RenderCards data={allPosts} title="No posts found" />
               )}
             </div>
           </>
