@@ -25,7 +25,7 @@ const CreatePost = () => {
 
       try {
         const response = await fetch(
-          "https://dalle-image-generator-server.onrender.com/api/v1/posts",
+          "https://a-s5dw.onrender.com/api/v1/posts",
           {
             method: "POST",
             headers: {
@@ -61,7 +61,7 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
         const response = await fetch(
-          "https://dalle-image-generator-server.onrender.com/api/v1/dalle",
+          "https://a-s5dw.onrender.com/api/v1/dalle",
           {
             method: "POST",
             headers: {
