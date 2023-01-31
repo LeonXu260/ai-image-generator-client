@@ -25,7 +25,7 @@ const CreatePost = () => {
 
       try {
         const response = await fetch(
-          "https://ai-image-generator-server.onrender.com/api/v1/posts",
+          "https://ai-image-generator-server.onrender.com/api/v1/post",
           {
             method: "POST",
             headers: {
